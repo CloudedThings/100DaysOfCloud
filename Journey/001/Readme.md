@@ -1,7 +1,7 @@
-**Add a cover photo like:**
+
 ![diagram](img/001_diagram.jpg)
 
-# New post title here
+# Introduction to Amazon Neptune
 
 ## Introduction
 
