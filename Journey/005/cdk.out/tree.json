@@ -1,0 +1,306 @@
+{
+  "version": "tree-0.1",
+  "tree": {
+    "id": "App",
+    "path": "",
+    "children": {
+      "Tree": {
+        "id": "Tree",
+        "path": "Tree",
+        "constructInfo": {
+          "fqn": "@aws-cdk/core.Construct",
+          "version": "1.117.0"
+        }
+      },
+      "S3LambdaStack": {
+        "id": "S3LambdaStack",
+        "path": "S3LambdaStack",
+        "children": {
+          "lambda-role": {
+            "id": "lambda-role",
+            "path": "S3LambdaStack/lambda-role",
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.Resource",
+              "version": "1.139.0"
+            }
+          },
+          "ImmutableRolelambda-role": {
+            "id": "ImmutableRolelambda-role",
+            "path": "S3LambdaStack/ImmutableRolelambda-role",
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.Resource",
+              "version": "1.139.0"
+            }
+          },
+          "s3-bucket": {
+            "id": "s3-bucket",
+            "path": "S3LambdaStack/s3-bucket",
+            "children": {
+              "Notifications": {
+                "id": "Notifications",
+                "path": "S3LambdaStack/s3-bucket/Notifications",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.Construct",
+                  "version": "1.139.0"
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "S3LambdaStack/s3-bucket/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::S3::Bucket",
+                  "aws:cdk:cloudformation:props": {}
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-s3.CfnBucket",
+                  "version": "1.139.0"
+                }
+              },
+              "Policy": {
+                "id": "Policy",
+                "path": "S3LambdaStack/s3-bucket/Policy",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "S3LambdaStack/s3-bucket/Policy/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::S3::BucketPolicy",
+                      "aws:cdk:cloudformation:props": {
+                        "bucket": {
+                          "Ref": "s3bucket64CB25AF"
+                        },
+                        "policyDocument": {
+                          "Statement": [
+                            {
+                              "Action": "s3:GetObject",
+                              "Effect": "Allow",
+                              "Principal": {
+                                "AWS": "*"
+                              },
+                              "Resource": {
+                                "Fn::Join": [
+                                  "",
+                                  [
+                                    {
+                                      "Fn::GetAtt": [
+                                        "s3bucket64CB25AF",
+                                        "Arn"
+                                      ]
+                                    },
+                                    "/*"
+                                  ]
+                                ]
+                              }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-s3.CfnBucketPolicy",
+                      "version": "1.139.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-s3.BucketPolicy",
+                  "version": "1.139.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-s3.Bucket",
+              "version": "1.139.0"
+            }
+          },
+          "lambda-function": {
+            "id": "lambda-function",
+            "path": "S3LambdaStack/lambda-function",
+            "children": {
+              "Code": {
+                "id": "Code",
+                "path": "S3LambdaStack/lambda-function/Code",
+                "children": {
+                  "Stage": {
+                    "id": "Stage",
+                    "path": "S3LambdaStack/lambda-function/Code/Stage",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.AssetStaging",
+                      "version": "1.139.0"
+                    }
+                  },
+                  "AssetBucket": {
+                    "id": "AssetBucket",
+                    "path": "S3LambdaStack/lambda-function/Code/AssetBucket",
+                    "children": {
+                      "Notifications": {
+                        "id": "Notifications",
+                        "path": "S3LambdaStack/lambda-function/Code/AssetBucket/Notifications",
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/core.Construct",
+                          "version": "1.139.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-s3.BucketBase",
+                      "version": "1.139.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-s3-assets.Asset",
+                  "version": "1.139.0"
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "S3LambdaStack/lambda-function/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
+                  "aws:cdk:cloudformation:props": {
+                    "code": {
+                      "s3Bucket": {
+                        "Ref": "AssetParameters6fafd7b59edc1ced0edcaeff6df474dd23ea4e99bf7a0f6c64256a7e88fd595fS3BucketB5A62808"
+                      },
+                      "s3Key": {
+                        "Fn::Join": [
+                          "",
+                          [
+                            {
+                              "Fn::Select": [
+                                0,
+                                {
+                                  "Fn::Split": [
+                                    "||",
+                                    {
+                                      "Ref": "AssetParameters6fafd7b59edc1ced0edcaeff6df474dd23ea4e99bf7a0f6c64256a7e88fd595fS3VersionKeyF2BB1756"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "Fn::Select": [
+                                1,
+                                {
+                                  "Fn::Split": [
+                                    "||",
+                                    {
+                                      "Ref": "AssetParameters6fafd7b59edc1ced0edcaeff6df474dd23ea4e99bf7a0f6c64256a7e88fd595fS3VersionKeyF2BB1756"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        ]
+                      }
+                    },
+                    "role": "arn:aws:iam::636807406669:role/LambdaBasicRole",
+                    "environment": {
+                      "variables": {
+                        "BUCKET_NAME": {
+                          "Ref": "s3bucket64CB25AF"
+                        }
+                      }
+                    },
+                    "handler": "lab-function.handler",
+                    "runtime": "nodejs12.x"
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-lambda.CfnFunction",
+                  "version": "1.139.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-lambda.Function",
+              "version": "1.139.0"
+            }
+          },
+          "AssetParameters": {
+            "id": "AssetParameters",
+            "path": "S3LambdaStack/AssetParameters",
+            "children": {
+              "6fafd7b59edc1ced0edcaeff6df474dd23ea4e99bf7a0f6c64256a7e88fd595f": {
+                "id": "6fafd7b59edc1ced0edcaeff6df474dd23ea4e99bf7a0f6c64256a7e88fd595f",
+                "path": "S3LambdaStack/AssetParameters/6fafd7b59edc1ced0edcaeff6df474dd23ea4e99bf7a0f6c64256a7e88fd595f",
+                "children": {
+                  "S3Bucket": {
+                    "id": "S3Bucket",
+                    "path": "S3LambdaStack/AssetParameters/6fafd7b59edc1ced0edcaeff6df474dd23ea4e99bf7a0f6c64256a7e88fd595f/S3Bucket",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnParameter",
+                      "version": "1.117.0"
+                    }
+                  },
+                  "S3VersionKey": {
+                    "id": "S3VersionKey",
+                    "path": "S3LambdaStack/AssetParameters/6fafd7b59edc1ced0edcaeff6df474dd23ea4e99bf7a0f6c64256a7e88fd595f/S3VersionKey",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnParameter",
+                      "version": "1.117.0"
+                    }
+                  },
+                  "ArtifactHash": {
+                    "id": "ArtifactHash",
+                    "path": "S3LambdaStack/AssetParameters/6fafd7b59edc1ced0edcaeff6df474dd23ea4e99bf7a0f6c64256a7e88fd595f/ArtifactHash",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnParameter",
+                      "version": "1.117.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.Construct",
+                  "version": "1.117.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.Construct",
+              "version": "1.117.0"
+            }
+          },
+          "CDKMetadata": {
+            "id": "CDKMetadata",
+            "path": "S3LambdaStack/CDKMetadata",
+            "children": {
+              "Default": {
+                "id": "Default",
+                "path": "S3LambdaStack/CDKMetadata/Default",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.CfnResource",
+                  "version": "1.117.0"
+                }
+              },
+              "Condition": {
+                "id": "Condition",
+                "path": "S3LambdaStack/CDKMetadata/Condition",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.CfnCondition",
+                  "version": "1.117.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.Construct",
+              "version": "1.117.0"
+            }
+          }
+        },
+        "constructInfo": {
+          "fqn": "@aws-cdk/core.Stack",
+          "version": "1.117.0"
+        }
+      }
+    },
+    "constructInfo": {
+      "fqn": "@aws-cdk/core.App",
+      "version": "1.117.0"
+    }
+  }
+}

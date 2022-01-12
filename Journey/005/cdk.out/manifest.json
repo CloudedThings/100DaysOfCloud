@@ -1,0 +1,283 @@
+{
+  "version": "13.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "S3LambdaStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "S3LambdaStack.template.json",
+        "validateOnSynth": false
+      },
+      "metadata": {
+        "/S3LambdaStack": [
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.6fafd7b59edc1ced0edcaeff6df474dd23ea4e99bf7a0f6c64256a7e88fd595f",
+              "id": "6fafd7b59edc1ced0edcaeff6df474dd23ea4e99bf7a0f6c64256a7e88fd595f",
+              "packaging": "zip",
+              "sourceHash": "6fafd7b59edc1ced0edcaeff6df474dd23ea4e99bf7a0f6c64256a7e88fd595f",
+              "s3BucketParameter": "AssetParameters6fafd7b59edc1ced0edcaeff6df474dd23ea4e99bf7a0f6c64256a7e88fd595fS3BucketB5A62808",
+              "s3KeyParameter": "AssetParameters6fafd7b59edc1ced0edcaeff6df474dd23ea4e99bf7a0f6c64256a7e88fd595fS3VersionKeyF2BB1756",
+              "artifactHashParameter": "AssetParameters6fafd7b59edc1ced0edcaeff6df474dd23ea4e99bf7a0f6c64256a7e88fd595fArtifactHashDE68454E"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (/home/project/s3lambda/node_modules/@aws-cdk/core/lib/construct-compat.ts:252:92)",
+              "LegacyStackSynthesizer.doAddFileAsset (/home/project/s3lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:161:23)",
+              "LegacyStackSynthesizer.addFileAsset (/home/project/s3lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:66:19)",
+              "S3LambdaStack.addFileAsset (/home/project/s3lambda/node_modules/@aws-cdk/core/lib/stack.ts:355:29)",
+              "LegacyStackSynthesizer.addFileAsset (/home/project/s3lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:70:25)",
+              "new Asset (/home/project/s3lambda/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:93:40)",
+              "AssetCode.bind (/home/project/s3lambda/node_modules/@aws-cdk/aws-lambda/lib/code.ts:183:20)",
+              "new Function (/home/project/s3lambda/node_modules/@aws-cdk/aws-lambda/lib/function.ts:350:29)",
+              "new S3LambdaStack (/home/project/s3lambda/lib/s3lambda-stack.ts:22:16)",
+              "Object.<anonymous> (/home/project/s3lambda/bin/s3lambda.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Module.m._compile (/home/project/s3lambda/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/project/s3lambda/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/home/project/s3lambda/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/project/s3lambda/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/S3LambdaStack/s3-bucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "s3bucket64CB25AF",
+            "trace": [
+              "new Bucket (/home/project/s3lambda/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:816:22)",
+              "new S3LambdaStack (/home/project/s3lambda/lib/s3lambda-stack.ts:18:20)",
+              "Object.<anonymous> (/home/project/s3lambda/bin/s3lambda.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Module.m._compile (/home/project/s3lambda/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/project/s3lambda/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/home/project/s3lambda/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/project/s3lambda/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/S3LambdaStack/s3-bucket/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "s3bucketPolicyF7E91061",
+            "trace": [
+              "new BucketPolicy (/home/project/s3lambda/node_modules/@aws-cdk/aws-s3/lib/bucket-policy.ts:30:21)",
+              "Bucket.addToResourcePolicy (/home/project/s3lambda/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:231:21)",
+              "Function.addToPrincipalOrResource (/home/project/s3lambda/node_modules/@aws-cdk/aws-iam/lib/grant.ts:76:45)",
+              "Bucket.grantPublicAccess (/home/project/s3lambda/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:342:22)",
+              "new S3LambdaStack (/home/project/s3lambda/lib/s3lambda-stack.ts:19:12)",
+              "Object.<anonymous> (/home/project/s3lambda/bin/s3lambda.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Module.m._compile (/home/project/s3lambda/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/project/s3lambda/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/home/project/s3lambda/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/project/s3lambda/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/S3LambdaStack/lambda-function/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "lambdafunction841552AF",
+            "trace": [
+              "new Function (/home/project/s3lambda/node_modules/@aws-cdk/aws-lambda/lib/function.ts:400:35)",
+              "new S3LambdaStack (/home/project/s3lambda/lib/s3lambda-stack.ts:22:16)",
+              "Object.<anonymous> (/home/project/s3lambda/bin/s3lambda.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Module.m._compile (/home/project/s3lambda/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/project/s3lambda/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/home/project/s3lambda/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/project/s3lambda/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/S3LambdaStack/AssetParameters/6fafd7b59edc1ced0edcaeff6df474dd23ea4e99bf7a0f6c64256a7e88fd595f/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters6fafd7b59edc1ced0edcaeff6df474dd23ea4e99bf7a0f6c64256a7e88fd595fS3BucketB5A62808",
+            "trace": [
+              "new FileAssetParameters (/home/project/s3lambda/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:16:32)",
+              "LegacyStackSynthesizer.doAddFileAsset (/home/project/s3lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:144:16)",
+              "LegacyStackSynthesizer.addFileAsset (/home/project/s3lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:66:19)",
+              "S3LambdaStack.addFileAsset (/home/project/s3lambda/node_modules/@aws-cdk/core/lib/stack.ts:355:29)",
+              "LegacyStackSynthesizer.addFileAsset (/home/project/s3lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:70:25)",
+              "new Asset (/home/project/s3lambda/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:93:40)",
+              "AssetCode.bind (/home/project/s3lambda/node_modules/@aws-cdk/aws-lambda/lib/code.ts:183:20)",
+              "new Function (/home/project/s3lambda/node_modules/@aws-cdk/aws-lambda/lib/function.ts:350:29)",
+              "new S3LambdaStack (/home/project/s3lambda/lib/s3lambda-stack.ts:22:16)",
+              "Object.<anonymous> (/home/project/s3lambda/bin/s3lambda.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Module.m._compile (/home/project/s3lambda/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/project/s3lambda/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/home/project/s3lambda/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/project/s3lambda/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/S3LambdaStack/AssetParameters/6fafd7b59edc1ced0edcaeff6df474dd23ea4e99bf7a0f6c64256a7e88fd595f/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters6fafd7b59edc1ced0edcaeff6df474dd23ea4e99bf7a0f6c64256a7e88fd595fS3VersionKeyF2BB1756",
+            "trace": [
+              "new FileAssetParameters (/home/project/s3lambda/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:21:31)",
+              "LegacyStackSynthesizer.doAddFileAsset (/home/project/s3lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:144:16)",
+              "LegacyStackSynthesizer.addFileAsset (/home/project/s3lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:66:19)",
+              "S3LambdaStack.addFileAsset (/home/project/s3lambda/node_modules/@aws-cdk/core/lib/stack.ts:355:29)",
+              "LegacyStackSynthesizer.addFileAsset (/home/project/s3lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:70:25)",
+              "new Asset (/home/project/s3lambda/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:93:40)",
+              "AssetCode.bind (/home/project/s3lambda/node_modules/@aws-cdk/aws-lambda/lib/code.ts:183:20)",
+              "new Function (/home/project/s3lambda/node_modules/@aws-cdk/aws-lambda/lib/function.ts:350:29)",
+              "new S3LambdaStack (/home/project/s3lambda/lib/s3lambda-stack.ts:22:16)",
+              "Object.<anonymous> (/home/project/s3lambda/bin/s3lambda.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Module.m._compile (/home/project/s3lambda/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/project/s3lambda/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/home/project/s3lambda/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/project/s3lambda/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/S3LambdaStack/AssetParameters/6fafd7b59edc1ced0edcaeff6df474dd23ea4e99bf7a0f6c64256a7e88fd595f/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters6fafd7b59edc1ced0edcaeff6df474dd23ea4e99bf7a0f6c64256a7e88fd595fArtifactHashDE68454E",
+            "trace": [
+              "new FileAssetParameters (/home/project/s3lambda/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:26:34)",
+              "LegacyStackSynthesizer.doAddFileAsset (/home/project/s3lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:144:16)",
+              "LegacyStackSynthesizer.addFileAsset (/home/project/s3lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:66:19)",
+              "S3LambdaStack.addFileAsset (/home/project/s3lambda/node_modules/@aws-cdk/core/lib/stack.ts:355:29)",
+              "LegacyStackSynthesizer.addFileAsset (/home/project/s3lambda/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:70:25)",
+              "new Asset (/home/project/s3lambda/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:93:40)",
+              "AssetCode.bind (/home/project/s3lambda/node_modules/@aws-cdk/aws-lambda/lib/code.ts:183:20)",
+              "new Function (/home/project/s3lambda/node_modules/@aws-cdk/aws-lambda/lib/function.ts:350:29)",
+              "new S3LambdaStack (/home/project/s3lambda/lib/s3lambda-stack.ts:22:16)",
+              "Object.<anonymous> (/home/project/s3lambda/bin/s3lambda.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Module.m._compile (/home/project/s3lambda/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/project/s3lambda/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/home/project/s3lambda/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/home/project/s3lambda/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1137:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1157:10)",
+              "Module.load (internal/modules/cjs/loader.js:985:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:878:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/S3LambdaStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (/home/project/s3lambda/node_modules/@aws-cdk/core/lib/private/metadata-resource.ts:22:24)",
+              "/home/project/s3lambda/node_modules/@aws-cdk/core/lib/private/synthesis.ts:166:5",
+              "visit (/home/project/s3lambda/node_modules/@aws-cdk/core/lib/private/synthesis.ts:231:5)",
+              "visit (/home/project/s3lambda/node_modules/@aws-cdk/core/lib/private/synthesis.ts:227:5)",
+              "injectMetadataResources (/home/project/s3lambda/node_modules/@aws-cdk/core/lib/private/synthesis.ts:157:3)",
+              "Object.synthesize (/home/project/s3lambda/node_modules/@aws-cdk/core/lib/private/synthesis.ts:18:3)",
+              "App.synth (/home/project/s3lambda/node_modules/@aws-cdk/core/lib/stage.ts:94:23)",
+              "process.<anonymous> (/home/project/s3lambda/node_modules/@aws-cdk/core/lib/app.ts:64:45)",
+              "Object.onceWrapper (events.js:422:26)",
+              "process.emit (events.js:315:20)",
+              "process.EventEmitter.emit (domain.js:483:12)",
+              "process.emit (/home/project/s3lambda/node_modules/source-map-support/source-map-support.js:516:21)"
+            ]
+          }
+        ],
+        "/S3LambdaStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable",
+            "trace": [
+              "new MetadataResource (/home/project/s3lambda/node_modules/@aws-cdk/core/lib/private/metadata-resource.ts:31:27)",
+              "/home/project/s3lambda/node_modules/@aws-cdk/core/lib/private/synthesis.ts:166:5",
+              "visit (/home/project/s3lambda/node_modules/@aws-cdk/core/lib/private/synthesis.ts:231:5)",
+              "visit (/home/project/s3lambda/node_modules/@aws-cdk/core/lib/private/synthesis.ts:227:5)",
+              "injectMetadataResources (/home/project/s3lambda/node_modules/@aws-cdk/core/lib/private/synthesis.ts:157:3)",
+              "Object.synthesize (/home/project/s3lambda/node_modules/@aws-cdk/core/lib/private/synthesis.ts:18:3)",
+              "App.synth (/home/project/s3lambda/node_modules/@aws-cdk/core/lib/stage.ts:94:23)",
+              "process.<anonymous> (/home/project/s3lambda/node_modules/@aws-cdk/core/lib/app.ts:64:45)",
+              "Object.onceWrapper (events.js:422:26)",
+              "process.emit (events.js:315:20)",
+              "process.EventEmitter.emit (domain.js:483:12)",
+              "process.emit (/home/project/s3lambda/node_modules/source-map-support/source-map-support.js:516:21)"
+            ]
+          }
+        ]
+      },
+      "displayName": "S3LambdaStack"
+    }
+  }
+}
